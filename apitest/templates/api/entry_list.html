@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>{% block title %}Blog Header{% endblock %}</title>
+   {% block head %}{% endblock %}
+</head>
+<body>
+	<h2>
+{{ message }}
+</h2>
+<br>
+<br>
+<tr>
+	<td><b>Title</b></td>
+	<td><b>content</b></td>
+</tr>
+{% for v in entry %}
+<br>
+<tr>
+	<td>
+		<h3>{{ v.title }}</h3>
+	</td>
+	<td>
+		{{ v.body }}
+	</td>
+</tr>
+{% endfor %} 
+</body>
+</html>
